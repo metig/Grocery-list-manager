@@ -1,14 +1,13 @@
-
-<div>
-    <h2> Grocery list manager </h2>
- 
+<div style="margin: 50px 300px 50px 300px">
+   <h2> Grocery list manager </h2>
     <div class="row">
         <div class="col-xs-6 col-md-4">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="enter grocery items" [(ngModel)]="task" />
                 <div class="input-group-btn">
                     <button class="btn btn-default btn-sm" type="button" (click)="onClick()">
-                       <span class="glyphicon glyphicon-ok" style= "additive-symbols: image()"></span>ok 
+                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                        <span class="glyphicon glyphicon-plus-sign" ></span>
                    </button>
                 </div>
             </div>
@@ -16,10 +15,27 @@
     </div>
     <br />
 
-    <ul class="list-group">
-        <li *ngFor="let task of tasks" class="list-group-item">
-            <span> {{ task.name }} </span>
+    <ul class="list-group" >
+        <li id="my-list" style="background-color: rgba(0, 153, 255, 0.075)" *ngFor="let task of tasks" class="list-group-item">
+            <span style="animation: cubic-bezier(0.075, 0.82, 0.165, 1)"> <input type="checkbox" name="grocery1" value="name">   {{ task.name }} 
+                </span>
+            
+               <span class="close">&times;</span>
         </li>
     </ul>
+
+
+    <script>
+            var close = document.getElementsByClassName("close");
+            var i;
+            
+            for (i = 0; i < closelists.length; i++) {
+              close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = 'none';
+              }
+            }
+        </script>
+ 
  
 </div>
