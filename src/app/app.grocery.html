@@ -1,5 +1,5 @@
-<div style="margin: 50px 300px 50px 300px">
-   <h2> Grocery list manager </h2>
+<div style="margin: 50px 300px 50px 300px; font-size: 20px;background-color: wheat;padding: 50px" >
+   <h2 style="font-size: 50px"> Grocery list manager </h2>
     <div class="row">
         <div class="col-xs-6 col-md-4">
             <div class="input-group">
@@ -14,28 +14,22 @@
         </div>
     </div>
     <br />
-
     <ul class="list-group" >
-        <li id="my-list" style="background-color: rgba(0, 153, 255, 0.075)" *ngFor="let task of tasks" class="list-group-item">
-            <span style="animation: cubic-bezier(0.075, 0.82, 0.165, 1)"> <input type="checkbox" name="grocery1" value="name">   {{ task.name }} 
-                </span>
-            
-               <span class="close">&times;</span>
+        <li  style="background-color: rgba(0, 153, 255, 0.075)" *ngFor="let task of tasks" class="list-group-item">
+            <span style="animation: cubic-bezier(0.075, 0.82, 0.165, 1)"> <input type="checkbox" name="grocery1" value="name">   {{ task.name }} </span>
+            <span (click)="onDelete(task)" class="close">&times;</span>
         </li>
+      <script>
+                var close = document.getElementsByClassName("close");
+                var i;
+                
+                for (i = 0; i < closelists.length; i++) {
+                  close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = 'none';
+                  }
+                }
+            </script>
     </ul>
-
-
-    <script>
-            var close = document.getElementsByClassName("close");
-            var i;
-            
-            for (i = 0; i < closelists.length; i++) {
-              close[i].onclick = function() {
-                var div = this.parentElement;
-                div.style.display = 'none';
-              }
-            }
-        </script>
- 
- 
+    
 </div>
