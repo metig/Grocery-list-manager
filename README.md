@@ -1,5 +1,4 @@
 # AngularGrocery
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/JVUU3t4Eovc&t=18s/0.jpg)](http://www.youtube.com/watch?v=JVUU3t4Eovc&t=18s)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
